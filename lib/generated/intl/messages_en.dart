@@ -21,5 +21,27 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "dioErrorTypeCancel": MessageLookupByLibrary.simpleMessage(
+            "Request to the server was cancelled"),
+        "dioErrorTypeConnectionError":
+            MessageLookupByLibrary.simpleMessage("No Internet"),
+        "dioErrorTypeConnectionTimeout":
+            MessageLookupByLibrary.simpleMessage("Connection timed out"),
+        "dioErrorTypeReceiveTimeout":
+            MessageLookupByLibrary.simpleMessage("Receiving timeout occurred"),
+        "dioErrorTypeSendTimeout":
+            MessageLookupByLibrary.simpleMessage("Request send timeout"),
+        "dismiss": MessageLookupByLibrary.simpleMessage("Dismiss"),
+        "error400": MessageLookupByLibrary.simpleMessage("Bad request"),
+        "error403": MessageLookupByLibrary.simpleMessage("Not Authorized"),
+        "error404": MessageLookupByLibrary.simpleMessage(
+            "The requested resource does not exist"),
+        "error500":
+            MessageLookupByLibrary.simpleMessage("Internal server error"),
+        "hiveNotInitializedError":
+            MessageLookupByLibrary.simpleMessage("Hive is not initialized"),
+        "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "unknownError": MessageLookupByLibrary.simpleMessage("Unknown error")
+      };
 }
