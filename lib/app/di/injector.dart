@@ -6,6 +6,7 @@ import 'package:weather_app/app/constants/api_constants.dart';
 import 'package:weather_app/data/clients/hive_client.dart';
 import 'package:weather_app/data/dio/dio_factory.dart';
 import 'package:weather_app/presentation/context_activity/bloc/context_activity_bloc.dart';
+import 'package:weather_app/presentation/screens/home_screen/bloc/home_bloc.dart';
 import 'package:weather_app/presentation/screens/splash_screen/bloc/splash_bloc.dart';
 
 GetIt getIt = GetIt.instance;
@@ -15,6 +16,7 @@ class Injector {
     /// Init blocs
     getIt.registerLazySingleton<ContextActivityBloc>(() => ContextActivityBloc());
     getIt.registerLazySingleton<SplashBloc>(() => SplashBloc());
+    getIt.registerLazySingleton<HomeBloc>(() => HomeBloc());
 
     /// Init appRoute
     getIt.registerLazySingleton<AppRouter>(() => AppRouter());
